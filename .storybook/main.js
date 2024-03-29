@@ -4,7 +4,7 @@ import { mergeConfig } from 'vite';
 const config = {
   stories: ['../app/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    { name: '@storybook/addon-essentials', options: { backgrounds: false } },
+    'storybook-addon-remix-react-router',
     '@storybook/addon-links',
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',

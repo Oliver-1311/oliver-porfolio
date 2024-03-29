@@ -2,7 +2,6 @@ import {
   vitePlugin as remix,
   cloudflareDevProxyVitePlugin as remixCloudflareDevProxy,
 } from '@remix-run/dev';
-import { installGlobals } from '@remix-run/node';
 import { defineConfig } from 'vite';
 import jsconfigPaths from 'vite-jsconfig-paths';
 import mdx from '@mdx-js/rollup';
@@ -12,7 +11,6 @@ import rehypeImgSize from 'rehype-img-size';
 import rehypeSlug from 'rehype-slug';
 import rehypePrism from '@mapbox/rehype-prism';
 
-installGlobals();
 export default defineConfig({
   assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl'],
   build: {
@@ -31,7 +29,7 @@ export default defineConfig({
     remix({
       routes(defineRoutes) {
         return defineRoutes(route => {
-          route('/', 'routes/home/route.js', { index: true });
+          route('/', 'routes/_index.jsx', { index: true });
         });
       },
     }),
