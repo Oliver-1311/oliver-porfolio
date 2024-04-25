@@ -6,7 +6,7 @@
     "**/.server/**/*.jsx",
     "**/.client/**/*.js",
     "**/.client/**/*.jsx"
-  ],
+, "vite.config.mjs"  ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": ["@remix-run/node", "vite/client"],
