@@ -10,15 +10,40 @@ export const Monogram = forwardRef(({ highlight, className, ...props }, ref) => 
     <svg
       aria-hidden
       className={classes(styles.monogram, className)}
-      width="48"
-      height="29"
-      viewBox="0 0 48 29"
+      width="38.8"
+      height="29.8"
+      viewBox="0 0 388 298"
       ref={ref}
       {...props}
     >
       <defs>
         <clipPath id={clipId}>
-          <path d="M0 0h6.5a6 6 0 0 1 5.2 3.1L19.4 17l4-9L19 0h6.5a6 6 0 0 1 5.2 3.1L39.5 19 35 29 24.5 10 16 29 0 0Zm46.7 2.8A2 2 0 0 0 45 0h-7l5.5 10 3.2-7.2Z" />
+          <path d="M32 60C32 39 0 31 0 31H40C58 31 64 51 64 60V269H32V60Z" fill="black" />
+          <path
+            d="M312 282V100L255 207C255 207 288 157 288 173C288 189 276 282 276 282L255 296H387C387 296 387 282 372 282H312Z"
+            fill="black"
+          />
+          <path
+            d="M128 282H114C114 282 86 161 100 173C114 185 134 207 134 207L82 100V282H20C8 282 8 296 8 296H140C140 296 140 282 128 282Z"
+            fill="black"
+          />
+          <path
+            d="M360 60V269H332V60C332 39 342 31 352 31H387C387 31 360 44 360 60Z"
+            fill="black"
+          />
+          <path
+            d="M196 207L235 124L282 107L196 296L105 100L158 124L196 207Z"
+            fill="black"
+          />
+          <path
+            d="M242 107L288 87C288 87 298 70 312 39C326 8 352 0 352 0H312C312 0 294 5.72205e-06 282 22C270 44 242 107 242 107Z"
+            fill="black"
+          />
+          <path
+            d="M100 87L150 107C150 107 118 43 114 31C110 19 105 0 88 0H32C32 0 64 0 77 31C90 62 100 87 100 87Z"
+            fill="black"
+          />
+          <path d="M269 0L196 157L114 0H150L196 95L235 0H269Z" />
         </clipPath>
       </defs>
       <rect clipPath={`url(#${clipId})`} width="100%" height="100%" />
