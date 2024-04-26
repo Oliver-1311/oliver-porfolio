@@ -110,8 +110,8 @@ const tokensMobileSmall = {
 const dark = {
   background: 'oklch(17.76% 0 0)',
   backgroundLight: 'oklch(21.78% 0 0)',
-  primary: 'oklch(84.42% 0.19 202.24)',
-  accent: 'oklch(84.42% 0.19 202.24)',
+  primary: 'c',
+  accent: 'oklch(60.19% 0.098 191.31)',
   error: 'oklch(65.91% 0.249 13.76)',
   text: 'var(--white)',
   textTitle: 'var(--text)',
@@ -120,10 +120,10 @@ const dark = {
 };
 
 const light = {
-  background: 'oklch(96.12% 0 0)',
+  background: 'oklch(90% 0 0)',
   backgroundLight: 'var(--white)',
   primary: 'var(--black)',
-  accent: 'oklch(84.42% 0.19 202.24)',
+  accent: 'oklch(74.79% 0.128 185.13)',
   error: 'oklch(63.17% 0.259 25.41)',
   text: 'var(--black)',
   textTitle: 'color-mix(in lab, var(--text) 90%, transparent)',
