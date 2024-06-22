@@ -34,13 +34,15 @@ function shuffle(content, output, position) {
     if (index < position) {
       return { type: CharType.Value, value };
     }
-
     if (position % 1 < 0.5) {
       const rand = Math.floor(Math.random() * glyphs.length);
       return { type: CharType.Glyph, value: glyphs[rand] };
     }
+    if (output[index]) {
+      return { type: CharType.Glyph, value: output[index].value };
+    }
 
-    return { type: CharType.Glyph, value: output[index].value };
+    return { type: CharType.Glyph, value: glyphs[0] };
   });
 }
 
