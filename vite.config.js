@@ -12,6 +12,7 @@ import {
 } from '@remix-run/dev';
 
 export default defineConfig({
+  base: '/oliver-porfolio/',
   assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl'],
   build: {
     assetsInlineLimit: 1024,
