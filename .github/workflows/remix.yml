@@ -2,14 +2,15 @@ name: Deploy Vite Remix Project
 
 on:
   push:
-    branches:
-      - main  
+     branches: ["main"]
 permissions:
-  contents: write 
+  contents: read
+  pages: write
+  id-token: write
   
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
 
     steps:
     - name: Checkout repository
@@ -33,20 +34,12 @@ jobs:
         path: ./build
 
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Download artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: vite-remix-artifact
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
